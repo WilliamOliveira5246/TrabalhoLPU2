@@ -1,56 +1,70 @@
-#include<iostream>
+#include <iostream>
 #include "pessoa.hpp"
 
 using namespace std;
 
-string Pessoa::getNome() {
+Pessoa::Pessoa(string nome, string cpf, string dataNascimento, string genero,
+               string rua, int numero, string bairro, string cidade, string cep) : nome(nome), cpf(cpf), dataNascimento(dataNascimento), genero(genero), endereco({rua, numero, bairro, cidade, cep}) {}
+
+string Pessoa::getNome()
+{
     return nome;
 }
 
-void Pessoa::setNome(string nome) {
-    this->nome = nome;
+void Pessoa::setNome(string novoNome)
+{
+    nome = novoNome;
 }
 
-string Pessoa::getCpf() {
+string Pessoa::getCpf()
+{
     return cpf;
 }
 
-void Pessoa::setCpf(string cpf) {
-    this->cpf = cpf;
+void Pessoa::setCpf(string novoCpf)
+{
+    cpf = novoCpf;
 }
 
-string Pessoa::getDataNascimento() {
+string Pessoa::getDataNascimento()
+{
     return dataNascimento;
 }
 
-void Pessoa::setDataNascimento(string dataNascimento) {
-    this->dataNascimento = dataNascimento;
+void Pessoa::setDataNascimento(string novaDataNascimento)
+{
+    dataNascimento = novaDataNascimento;
 }
 
-string Pessoa::getGenero() {
+string Pessoa::getGenero()
+{
     return genero;
 }
 
-void Pessoa::setGenero(string genero) {
-    this->genero = genero;
+void Pessoa::setGenero(string novoGenero)
+{
+    genero = novoGenero;
 }
 
-Endereco Pessoa::getEndereco() {
+Endereco Pessoa::getEndereco()
+{
     return endereco;
 }
 
-void Pessoa::setEndereco(Endereco endereco) {
-    this->endereco = endereco;
+void Pessoa::setEndereco(Endereco novoEndereco)
+{
+    endereco = novoEndereco;
 }
 
-void Pessoa::setEndereco(std::string rua,
-                          int numero,
-                          std::string bairro,
-                          std::string cidade,
-                          std::string cep) {
-    this->endereco.rua = rua;
-    this->endereco.numero = numero;
-    this->endereco.bairro = bairro;
-    this->endereco.cidade = cidade;
-    this->endereco.cep = cep;
+void Pessoa::setEndereco(string novaRua,
+                         int novoNumero,
+                         string novoBairro,
+                         string novaCidade,
+                         string novoCep)
+{
+    endereco.rua = novaRua;
+    endereco.numero = novoNumero;
+    endereco.bairro = novoBairro;
+    endereco.cidade = novaCidade;
+    endereco.cep = novoCep;
 }

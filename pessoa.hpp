@@ -1,9 +1,10 @@
 #ifndef PESSOA_HPP
 #define PESSOA_HPP
 
-#include<iostream>
+#include <iostream>
 
-struct Endereco {
+struct Endereco
+{
     std::string rua;
     int numero;
     std::string bairro;
@@ -11,7 +12,8 @@ struct Endereco {
     std::string cep;
 };
 
-class Pessoa {
+class Pessoa
+{
 private:
     std::string nome;
     std::string cpf;
@@ -20,26 +22,24 @@ private:
     Endereco endereco;
 
 public:
-Pessoa(std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
-        std::string rua, int numero, std::string bairro, std::string cidade, std::string cep
-    ): nome(nome), cpf(cpf), dataNascimento(dataNascimento), genero(genero), endereco({rua, numero, bairro, cidade, cep}){}
+    Pessoa(std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
+           std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
 
-std::string getNome();
-void setNome(std::string nome);
+    std::string getNome();
+    void setNome(std::string nome);
 
-std::string getCpf();
-void setCpf(std::string cpf);
+    std::string getCpf();
+    void setCpf(std::string cpf);
 
-std::string getDataNascimento();
-void setDataNascimento(std::string dataNascimento);
+    std::string getDataNascimento();
+    void setDataNascimento(std::string dataNascimento);
 
-std::string getGenero();
-void setGenero(std::string genero);
+    std::string getGenero();
+    void setGenero(std::string genero);
 
-Endereco getEndereco();
-void setEndereco(Endereco endereco);
-void setEndereco(std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
-
+    Endereco getEndereco();
+    void setEndereco(Endereco endereco);
+    void setEndereco(std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
 };
 
 #endif
