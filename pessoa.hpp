@@ -22,8 +22,11 @@ private:
     Endereco endereco;
 
 public:
-    Pessoa(std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
-           std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
+    Pessoa
+    (
+        std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
+        std::string rua, int numero, std::string bairro, std::string cidade, std::string cep
+    );
 
     std::string getNome();
     void setNome(std::string nome);

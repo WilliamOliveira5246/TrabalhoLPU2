@@ -3,8 +3,14 @@
 
 using namespace std;
 
-Funcionario::Funcionario(string matricula, float salario, string departamento, int cargaHoraria, string dataIngresso)
-    : matricula(matricula), salario(salario), departamento(departamento), cargaHoraria(cargaHoraria), dataIngresso(dataIngresso) {}
+Funcionario::Funcionario
+(
+    string matricula, float salario, string departamento, int cargaHoraria, 
+    string dataIngresso, string nome, string cpf, string dataNascimento,
+    string genero, string rua, int numero, string bairro, string cidade, 
+    string cep
+) : Pessoa(nome, cpf, dataNascimento, genero, rua, numero, bairro, cidade, cep),
+    matricula(matricula), salario(salario), departamento(departamento), cargaHoraria(cargaHoraria), dataIngresso(dataIngresso) {}
 
 string Funcionario::getMatricula()
 {
