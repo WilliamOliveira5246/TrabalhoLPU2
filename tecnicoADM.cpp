@@ -3,6 +3,7 @@
 
 using namespace std;
 
+TecnicoADM::TecnicoADM(){};
 TecnicoADM::TecnicoADM
 (
     float adicionalProdutividade, string funcaoDesempenhada,

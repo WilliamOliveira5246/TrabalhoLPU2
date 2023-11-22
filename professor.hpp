@@ -39,9 +39,9 @@ public:
     std::string getDisciplina();
     void setDisciplina(std::string disciplina);
 
-    Nivel stringToNivel(std::string nivelStr);
+    static Nivel stringToNivel(std::string nivelStr);
 
-    Formacao stringToFormacao(std::string formacaoStr);
+    static Formacao stringToFormacao(std::string formacaoStr);
 
 };
 

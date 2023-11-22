@@ -2,9 +2,10 @@
 #define BANCODAO_HPP
 
 #include <iostream>
+#include <vector>
+#include <stdexcept>
 #include "professor.hpp"
 #include "tecnicoADM.hpp"
-#include <vector>
 
 class BancoDAO
 {
@@ -13,9 +14,9 @@ private:
     std::vector<TecnicoADM> tecnicosADM;
 
 public:
-    vector<Professor> getProfessores();
+    std::vector<Professor> getProfessores();
 
-    vector<TecnicoADM> getTecnicosADM();
+    std::vector<TecnicoADM> getTecnicosADM();
 
     //Cadastra um novo professor
     void cadastrarProfessor();
@@ -41,8 +42,13 @@ public:
     //Localiza e exibe um TecnicoADMa partir de uma matrícula passada como parâmetro
     TecnicoADM buscarTecnicoADM(int matricula);
 
-    void salvarEmArquivo(BancoDAO banco);
+    void verificaPreExistenciaMatriculaProfessor(std::string matricula);
 
+    void verificaPreExistenciaMatriculaTecnicoADM(std::string matricula);
+
+    void verificaExistenciaProfessor(std::string matricula);
+
+    void verificaExistenciaTecnicoADM(std::string matricula);
 };
 
 #endif

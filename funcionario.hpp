@@ -14,6 +14,7 @@ private:
     std::string dataIngresso;
 
 public:
+    Funcionario();
     Funcionario
     (
         std::string matricula, float salario, std::string departamento, int cargaHoraria, 

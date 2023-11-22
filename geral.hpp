@@ -2,8 +2,10 @@
 #define GERAL_HPP
 
 #include<iostream>
+#include"bancoDAO.hpp"
 
-void abrirArquivoFuncionarios();
+void carregarDeArquivoBanco();
+void salvarEmArquivoBanco(BancoDAO banco);
 void clear();
 void pressQualquer();
 

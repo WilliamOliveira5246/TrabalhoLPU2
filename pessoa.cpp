@@ -3,6 +3,7 @@
 
 using namespace std;
 
+Pessoa::Pessoa(){};
 Pessoa::Pessoa(string nome, string cpf, string dataNascimento, string genero,
                string rua, int numero, string bairro, string cidade, string cep) :
                 nome(nome), cpf(cpf), dataNascimento(dataNascimento), genero(genero), endereco({rua, numero, bairro, cidade, cep}) {}

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+Funcionario::Funcionario(){};
 Funcionario::Funcionario
 (
     string matricula, float salario, string departamento, int cargaHoraria, 

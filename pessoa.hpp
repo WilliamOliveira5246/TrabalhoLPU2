@@ -22,6 +22,7 @@ private:
     Endereco endereco;
 
 public:
+    Pessoa();
     Pessoa
     (
         std::string nome, std::string cpf, std::string dataNascimento, std::string genero,

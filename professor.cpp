@@ -2,7 +2,7 @@
 #include "professor.hpp"
 
 using namespace std;
-
+Professor::Professor(){};
 Professor::Professor
 (
     Nivel nivelProfessor, Formacao formacaoProfessor, string disciplina,
@@ -45,7 +45,7 @@ void Professor::setDisciplina(std::string novaDisciplina)
     disciplina = novaDisciplina;
 }
 
-Nivel stringToNivel(std::string nivelStr){
+Nivel Professor::stringToNivel(std::string nivelStr){
     if (nivelStr == "I") {
         return Nivel::I;
     } else if (nivelStr == "II") {
@@ -63,11 +63,11 @@ Nivel stringToNivel(std::string nivelStr){
     } else if (nivelStr == "VIII") {
         return Nivel::VIII;
     } else {
-        throw std::invalid_argument("Valor de string inválido para Nivel");
+        throw std::invalid_argument("Valor inválido para Nivel");
     }
 }
 
-Formacao stringToFormacao(std::string formacaoStr){
+Formacao Professor::stringToFormacao(std::string formacaoStr){
     if (formacaoStr == "ESPECIALIZACAO") {
         return Formacao::ESPECIALIZACAO;
     } else if (formacaoStr == "MESTRADO") {
@@ -75,6 +75,6 @@ Formacao stringToFormacao(std::string formacaoStr){
     } else if (formacaoStr == "DOUTORADO") {
         return Formacao::DOUTORADO;
     } else {
-        throw std::invalid_argument("Valor de string inválido para Formacao");
+        throw std::invalid_argument("Valor inválido para Formacao");
     }
 }

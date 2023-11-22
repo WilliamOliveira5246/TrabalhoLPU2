@@ -2,7 +2,6 @@
 #include <vector>
 #include <fstream>
 #include "geral.hpp"
-#include "funcionario.hpp"
 #include "bancoDAO.hpp"
 
 using namespace std;
